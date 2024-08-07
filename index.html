@@ -24,7 +24,7 @@
             let username = form.querySelector("#username").value;
             let password = form.querySelector("#password").value;
             let ajax = new XMLHttpRequest();
-            ajax.open("POST","http://localhost:8080",true)  //code will  asyn so written true;
+            ajax.open("POST","http://localhost:8080",true)  //code will  async so written true;
             ajax.send("username="+username+"&password="+password);
 
             ajax.onreadystatechange = () =>{

@@ -1,5 +1,6 @@
 window.onload = () =>{
     signupRequest();
+    loginRequest();
 };
 
 
@@ -23,9 +24,13 @@ const signupRequest = () =>{
 
         ajax.onreadystatechange = () =>{
             if(ajax.readyState == 4){
-                console.log(JSON.parse(ajax.response).data);
+                console.log(JSON.parse(ajax.response));
                 //window.location = "https://google.com"
             }
         }
     }
+};
+
+const loginRequest = () =>{
+    alert();
 }

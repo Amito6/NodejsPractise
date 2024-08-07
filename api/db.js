@@ -20,3 +20,15 @@ exports.createData = (formData,collectionName) =>{
         }) 
     })
 };
+
+exports.findResData = (query,collectionName) =>{
+
+    return new Promise((resolve,reject)=>{
+        config().then((db)=>{
+            const findRes = db.collection(collectionName).find(query).toArray();
+            resolve(findRes);
+        }).catch((error)=>{
+            console.log("unable to find Res",err)
+        })
+    })
+}
